@@ -1,0 +1,17 @@
+.button {
+  display: block;
+  border: none;
+  background: $black_russian;
+  color: $white;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  &--full {
+    width: 100%;
+  }
+  &--small {
+    width: 150px;
+  }
+}

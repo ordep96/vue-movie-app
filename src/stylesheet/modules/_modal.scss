@@ -1,0 +1,48 @@
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transition: .3s all;
+  opacity: 0;
+  z-index: -1;
+  &:before {
+    content: "";
+    background: rgba(0,0,0,.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  &.show-modal {
+    opacity: 1;
+    z-index: 4;
+  }
+  &__button-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: $black_russian;
+    width: 40px;
+    height: 40px;
+    color: $white;
+    border-radius: 50%;
+    box-shadow: 1px 1px 3px rgba(0,0,0,.3);
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  &__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+}

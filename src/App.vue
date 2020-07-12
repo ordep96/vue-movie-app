@@ -1,32 +1,35 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <div id="nav" v-if="$router.history.current.name !==  'Login' && $router.history.current.name !== 'Register'">
+      <Header :user="user"/>
+      <Navbar :user="user"/>
     </div>
+    <div>
     <router-view/>
+    </div>
   </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+import Header from '@/components/navigation/header'
+import Navbar from '@/components/navigation/navbar';
 
-#nav {
-  padding: 30px;
+import { mapGetters, mapActions } from 'vuex'
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+export default {
+  name: 'App',
+  components: {
+    Header,
+    Navbar
+  },
+  computed: {
+    ...mapGetters(['user'])
+  },
+  methods: {
+    ...mapActions(['fetchUser'])
+  },
+  created () {
+    this.fetchUser()
   }
 }
-</style>
+</script>

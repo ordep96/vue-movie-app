@@ -1,0 +1,56 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  //background: $black_russian;
+  padding-left: 100px;
+  padding-right: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  box-shadow: 0 1px rgba(#000,.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  &__search {
+    width: 400px;
+    height: 40px;
+    position: relative;
+    .icon-search {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 10px;
+      font-size: 4px;
+    }
+  }
+  &__search-field {
+    width: 100%;
+    height: 100%;
+    border: none;
+    padding-left: 10px;
+  }
+
+  &__user {
+    display: flex;
+    align-items: center;
+  }
+  &__user-picture {
+    width: 50px;
+    border-radius: 50%;
+  }
+  &__user-name {
+    margin-left: 10px;
+    color: $white;
+    font-family: $roboto;
+    font-size: 12px;
+  }
+
+  &__button {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: $poppins;
+    border-radius: 5px;
+  }
+}

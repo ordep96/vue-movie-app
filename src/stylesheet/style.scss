@@ -1,0 +1,27 @@
+/* Vendors */
+@import './vendors/font-awesome';
+
+//settings
+@import './settings/colors';
+@import './settings/variables';
+
+// fonst
+@import './fonts/flaticon.css';
+
+/* Helpers */
+@import './helpers/box_sizing';
+@import './helpers/pages';
+@import './helpers/utilities';
+@import './helpers/responsive';
+@import './helpers/buttons';
+
+//core
+@import './core/core';
+
+/* Components */
+@import './modules/forms';
+@import './modules/header';
+@import './modules/movie';
+@import './modules/navbar';
+@import './modules/feature-movie';
+@import './modules/modal';
